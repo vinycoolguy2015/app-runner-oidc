@@ -53,7 +53,7 @@ jobs:
           region: ${{ secrets.AWS_REGION }}
           cpu : 1
           memory : 2
-          port: 80
+          port: 8080
           wait-for-service-stability-seconds: 300
 
       - name: App Runner ID
