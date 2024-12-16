@@ -13,7 +13,7 @@ permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read    # This is required for actions/checkout
 jobs:
-  AssumeRoleAndCallIdentity:
+  app-runner-deployment:
     runs-on: ubuntu-latest
     steps:
       - name: Git clone the repository
@@ -56,5 +56,5 @@ jobs:
           port: 80
           wait-for-service-stability: true
 
-  - name: App Runner ID
-    run: echo "App runner ID ${{ steps.deploy-apprunner.outputs.service-id }}"
+      - name: App Runner ID
+        run: echo "App runner ID ${{ steps.deploy-apprunner.outputs.service-id }}"
